@@ -1,4 +1,4 @@
-export const TodoList = ({todos, onDelete, deleting}) => {
+export const TodoListItem = ({todos, onDelete, deleting}) => {
     return <ul>
         {todos.map(todo => 
             <li key={todo.id}>
