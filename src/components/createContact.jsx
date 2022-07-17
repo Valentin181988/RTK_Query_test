@@ -2,7 +2,7 @@ import { useCreateTodoMutation } from "../redux/contactSlice";
 import { Spinner } from "./spinner";
 
 export const CreateContact = () => {
-    const [createTodo, {isLoading}] = useCreateTodoMutation();
+    const [createContact, {isLoading}] = useCreateTodoMutation();
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -15,7 +15,7 @@ export const CreateContact = () => {
           number,
         };
         
-        createTodo(contact);
+        createContact(contact);
         e.currentTarget.reset();
     };
 
@@ -28,7 +28,7 @@ export const CreateContact = () => {
             <br />
             <button type="submit" disabled={isLoading}>
                 {isLoading && <Spinner size={10} />}
-                Create todo
+                Create contact
             </button>
           </form> 
         </>
