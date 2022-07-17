@@ -1,15 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
-import { todosApi } from './contactSlice';
+import { contactsApi } from './contactSlice';
 
 export const store = configureStore({
   reducer: {  
-    [todosApi.reducerPath]: todosApi.reducer,
+    [contactsApi.reducerPath]: contactsApi.reducer,
   },
 
   middleware: getDefaultMiddleware => [
     ...getDefaultMiddleware(),
-    todosApi.middleware,
+    contactsApi.middleware,
   ],
 });
 

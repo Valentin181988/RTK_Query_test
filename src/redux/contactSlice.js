@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-export const todosApi = createApi({
-    reducerPath: 'todosApi',
+export const contactsApi = createApi({
+    reducerPath: 'contactsApi',
     baseQuery: fetchBaseQuery({ 
         baseUrl: 'https://62d4029ccd960e45d4519519.mockapi.io/api/v1' }),
         tagTypes: ['Todos'],
@@ -34,4 +34,4 @@ export const todosApi = createApi({
   export const { 
     useFechTodosQuery, 
     useDeleteTodoMutation, 
-    useCreateTodoMutation } = todosApi;
+    useCreateTodoMutation } = contactsApi;
