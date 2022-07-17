@@ -2,21 +2,21 @@ import {
     useFechTodosQuery, 
     useDeleteTodoMutation 
 } from "../redux/contactSlice";
-import { TodoList } from "./contactList";
+import { ContactList } from "./contactList";
 import { Spinner } from "./spinner";
 
 export const Contact = () => {
 
     const { data: contacts, isFetcing, error } = useFechTodosQuery();
-    const [ deleteTodo, {isLoading: isDeleting} ] = useDeleteTodoMutation();
+    const [ deleteContact, {isLoading: isDeleting} ] = useDeleteTodoMutation();
 
     return(
         <div>
             { isFetcing && <Spinner />}
             { contacts && 
-            <TodoList 
+            <ContactList 
             contacts={contacts} 
-            onDelete={deleteTodo} 
+            onDelete={deleteContact} 
             deleting={isDeleting}/>}
         </div>
     );
