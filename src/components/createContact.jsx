@@ -1,4 +1,4 @@
-import { useCreateTodoMutation } from "../redux/todoSlice";
+import { useCreateTodoMutation } from "../redux/contactSlice";
 import { Spinner } from "./spinner";
 
 export const CreateContact = () => {

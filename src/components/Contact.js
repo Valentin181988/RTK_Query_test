@@ -1,8 +1,8 @@
 import { 
     useFechTodosQuery, 
     useDeleteTodoMutation 
-} from "../redux/todoSlice";
-import { TodoList } from "./todoList";
+} from "../redux/contactSlice";
+import { TodoList } from "./contactList";
 import { Spinner } from "./spinner";
 
 export const Contact = () => {
