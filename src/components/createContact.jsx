@@ -1,8 +1,8 @@
-import { useCreateTodoMutation } from "../redux/contactSlice";
+import { useCreateContactMutation } from "../redux/contactSlice";
 import { Spinner } from "./spinner";
 
 export const CreateContact = () => {
-    const [createContact, {isLoading}] = useCreateTodoMutation();
+    const [createContact, {isLoading}] = useCreateContactMutation();
 
     const handleSubmit = e => {
         e.preventDefault();

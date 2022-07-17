@@ -4,20 +4,20 @@ export const contactsApi = createApi({
     reducerPath: 'contactsApi',
     baseQuery: fetchBaseQuery({ 
         baseUrl: 'https://62d4029ccd960e45d4519519.mockapi.io/api/v1' }),
-        tagTypes: ['Todos'],
+        tagTypes: ['Contacts'],
     endpoints: builder => ({
-      fechTodos: builder.query({
+      fetchContacts: builder.query({
         query: () => `/contacts`,
-        providesTags: ['Todos'],
+        providesTags: ['Contacts'],
       }),
-      deleteTodo: builder.mutation({
-        query: todoId => ({
-            url: `/contacts/${todoId}`,
+      deleteContact: builder.mutation({
+        query: contactId => ({
+            url: `/contacts/${contactId}`,
             method: 'DELETE',
         }),
-        invalidatesTags: ['Todos'],
+        invalidatesTags: ['Contacts'],
       }),
-      createTodo: builder.mutation({
+      createContact: builder.mutation({
         query: ({name, number}) => ({
             url: 'contacts',
             method: 'POST',
@@ -26,12 +26,12 @@ export const contactsApi = createApi({
                 number: number,
             }, 
         }),
-        invalidatesTags: ['Todos'],
+        invalidatesTags: ['Contacts'],
       }),
     }),
   });
   
   export const { 
-    useFechTodosQuery, 
-    useDeleteTodoMutation, 
-    useCreateTodoMutation } = contactsApi;
+    useFetchContactsQuery, 
+    useDeleteContactMutation, 
+    useCreateContactMutation } = contactsApi;

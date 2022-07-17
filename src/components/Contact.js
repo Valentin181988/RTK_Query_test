@@ -1,14 +1,14 @@
 import { 
-    useFechTodosQuery, 
-    useDeleteTodoMutation 
+    useFetchContactsQuery, 
+    useDeleteContactMutation 
 } from "../redux/contactSlice";
 import { ContactList } from "./contactList";
 import { Spinner } from "./spinner";
 
 export const Contact = () => {
 
-    const { data: contacts, isFetcing, error } = useFechTodosQuery();
-    const [ deleteContact, {isLoading: isDeleting} ] = useDeleteTodoMutation();
+    const { data: contacts, isFetcing, error } = useFetchContactsQuery();
+    const [ deleteContact, {isLoading: isDeleting} ] = useDeleteContactMutation();
 
     return(
         <div>
