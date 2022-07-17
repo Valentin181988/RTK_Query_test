@@ -1,11 +1,11 @@
 import './App.css';
 import { Todo } from './components/todo';
-import { CreateTodo } from './components/createTodo';
+import { CreateContact } from './components/createContact';
 
 function App() {
   return (
     <>
-      <CreateTodo />
+      <CreateContact />
       <Todo />
     </>
   );

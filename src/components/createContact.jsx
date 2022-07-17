@@ -1,7 +1,7 @@
 import { useCreateTodoMutation } from "../redux/todoSlice";
 import { Spinner } from "./spinner";
 
-export const CreateTodo = () => {
+export const CreateContact = () => {
     const [createTodo, {isLoading}] = useCreateTodoMutation();
 
     const handleSubmit = e => {
