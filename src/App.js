@@ -1,12 +1,12 @@
 import './App.css';
-import { Todo } from './components/todo';
+import { Contact } from './components/Contact';
 import { CreateContact } from './components/createContact';
 
 function App() {
   return (
     <>
       <CreateContact />
-      <Todo />
+      <Contact />
     </>
   );
 }

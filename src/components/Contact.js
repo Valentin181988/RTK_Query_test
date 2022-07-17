@@ -5,7 +5,7 @@ import {
 import { TodoList } from "./todoList";
 import { Spinner } from "./spinner";
 
-export const Todo = () => {
+export const Contact = () => {
 
     const { data: todos, isFetcing, error } = useFechTodosQuery();
     const [ deleteTodo, {isLoading: isDeleting} ] = useDeleteTodoMutation();
