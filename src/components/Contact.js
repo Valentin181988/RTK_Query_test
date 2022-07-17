@@ -7,15 +7,15 @@ import { Spinner } from "./spinner";
 
 export const Contact = () => {
 
-    const { data: todos, isFetcing, error } = useFechTodosQuery();
+    const { data: contacts, isFetcing, error } = useFechTodosQuery();
     const [ deleteTodo, {isLoading: isDeleting} ] = useDeleteTodoMutation();
 
     return(
         <div>
             { isFetcing && <Spinner />}
-            { todos && 
+            { contacts && 
             <TodoList 
-            todos={todos} 
+            contacts={contacts} 
             onDelete={deleteTodo} 
             deleting={isDeleting}/>}
         </div>

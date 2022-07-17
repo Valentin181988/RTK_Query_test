@@ -1,10 +1,10 @@
-export const TodoList = ({todos, onDelete, deleting}) => {
+export const TodoList = ({contacts, onDelete, deleting}) => {
     return <ul>
-        {todos.map(todo => 
-            <li key={todo.id}>
-                {todo.name}
-                {todo.number}
-                <button onClick={() => onDelete(todo.id)}>
+        {contacts.map(contact => 
+            <li key={contact.id}>
+                {contact.name}
+                {contact.number}
+                <button onClick={() => onDelete(contact.id)}>
                     {deleting ? 'Deleting...' : 'Delete'}
                 </button>
             </li>)}
